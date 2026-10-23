@@ -1,0 +1,316 @@
+{
+  "_app-navigation-BT-XnDWF.js": {
+    "file": "assets/app-navigation-BT-XnDWF.js",
+    "name": "app-navigation",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-CXnKph_e.js"
+    ]
+  },
+  "_chevron-down-BV3wJmdQ.js": {
+    "file": "assets/chevron-down-BV3wJmdQ.js",
+    "name": "chevron-down",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_chevron-left-Bwh0Hd9Q.js": {
+    "file": "assets/chevron-left-Bwh0Hd9Q.js",
+    "name": "chevron-left",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_chevron-right-Doi4N2_N.js": {
+    "file": "assets/chevron-right-Doi4N2_N.js",
+    "name": "chevron-right",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_composers-Cr-md-Pt.js": {
+    "file": "assets/composers-Cr-md-Pt.js",
+    "name": "composers",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_ui-R2AzBjjk.js",
+      "_plus-Euag5-8e.js",
+      "_trash-2-Dx8XewWD.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/composers-DJX9iuzT.css"
+    ]
+  },
+  "_composers-DJX9iuzT.css": {
+    "file": "assets/composers-DJX9iuzT.css",
+    "src": "_composers-DJX9iuzT.css"
+  },
+  "_eye-DuF9KaKs.js": {
+    "file": "assets/eye-DuF9KaKs.js",
+    "name": "eye",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_folder-tree-C0n7lEtH.js": {
+    "file": "assets/folder-tree-C0n7lEtH.js",
+    "name": "folder-tree",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_framework-CXnKph_e.js": {
+    "file": "assets/framework-CXnKph_e.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js"
+    ]
+  },
+  "_plus-Euag5-8e.js": {
+    "file": "assets/plus-Euag5-8e.js",
+    "name": "plus",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_quick-DpwZ-3ei.css": {
+    "file": "assets/quick-DpwZ-3ei.css",
+    "src": "_quick-DpwZ-3ei.css"
+  },
+  "_quick-actions-panel-D8uxlhU-.css": {
+    "file": "assets/quick-actions-panel-D8uxlhU-.css",
+    "src": "_quick-actions-panel-D8uxlhU-.css"
+  },
+  "_quick-actions-panel-JMc6u1nc.js": {
+    "file": "assets/quick-actions-panel-JMc6u1nc.js",
+    "name": "quick-actions-panel",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_app-navigation-BT-XnDWF.js",
+      "_ui-R2AzBjjk.js",
+      "_timer-BZ8hOC4P.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/quick-actions-panel-D8uxlhU-.css"
+    ]
+  },
+  "_rolldown-runtime-S-ySWqyJ.js": {
+    "file": "assets/rolldown-runtime-S-ySWqyJ.js",
+    "name": "rolldown-runtime"
+  },
+  "_timer-BZ8hOC4P.js": {
+    "file": "assets/timer-BZ8hOC4P.js",
+    "name": "timer",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_trash-2-Dx8XewWD.js": {
+    "file": "assets/trash-2-Dx8XewWD.js",
+    "name": "trash-2",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "_ui-B4HqL7CR.css": {
+    "file": "assets/ui-B4HqL7CR.css",
+    "src": "_ui-B4HqL7CR.css"
+  },
+  "_ui-R2AzBjjk.js": {
+    "file": "assets/ui-R2AzBjjk.js",
+    "name": "ui",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/ui-B4HqL7CR.css"
+    ]
+  },
+  "_undo-2-CHajLgSW.js": {
+    "file": "assets/undo-2-CHajLgSW.js",
+    "name": "undo-2",
+    "imports": [
+      "_ui-R2AzBjjk.js"
+    ]
+  },
+  "components/planner-app.tsx": {
+    "file": "assets/planner-app-O_L-j4w_.js",
+    "name": "planner-app",
+    "src": "components/planner-app.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_app-navigation-BT-XnDWF.js",
+      "_composers-Cr-md-Pt.js",
+      "_ui-R2AzBjjk.js",
+      "_quick-actions-panel-JMc6u1nc.js",
+      "_folder-tree-C0n7lEtH.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "dynamicImports": [
+      "components/views/today-view.tsx",
+      "components/views/inbox-view.tsx",
+      "components/views/calendar/calendar-view.tsx",
+      "components/views/projects-view.tsx",
+      "components/views/settings-view.tsx",
+      "components/views/quick-view.tsx",
+      "components/views/focus-view.tsx"
+    ]
+  },
+  "components/views/calendar/calendar-view.tsx": {
+    "file": "assets/calendar-view-BcC_T_oF.js",
+    "name": "calendar-view",
+    "src": "components/views/calendar/calendar-view.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_app-navigation-BT-XnDWF.js",
+      "_composers-Cr-md-Pt.js",
+      "_ui-R2AzBjjk.js",
+      "_undo-2-CHajLgSW.js",
+      "_chevron-down-BV3wJmdQ.js",
+      "_chevron-left-Bwh0Hd9Q.js",
+      "_chevron-right-Doi4N2_N.js",
+      "_eye-DuF9KaKs.js",
+      "_plus-Euag5-8e.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/calendar-view-Cf8yWL24.css"
+    ]
+  },
+  "components/views/focus-view.tsx": {
+    "file": "assets/focus-view-DvF1voE9.js",
+    "name": "focus-view",
+    "src": "components/views/focus-view.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_quick-actions-panel-JMc6u1nc.js",
+      "_timer-BZ8hOC4P.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/quick-DpwZ-3ei.css"
+    ]
+  },
+  "components/views/inbox-view.tsx": {
+    "file": "assets/inbox-view-C7p7_7LM.js",
+    "name": "inbox-view",
+    "src": "components/views/inbox-view.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_app-navigation-BT-XnDWF.js",
+      "_ui-R2AzBjjk.js",
+      "_undo-2-CHajLgSW.js",
+      "_chevron-down-BV3wJmdQ.js",
+      "_trash-2-Dx8XewWD.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/inbox-view-CYUZ7Wux.css"
+    ]
+  },
+  "components/views/projects-view.tsx": {
+    "file": "assets/projects-view-BqnfcB8u.js",
+    "name": "projects-view",
+    "src": "components/views/projects-view.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_app-navigation-BT-XnDWF.js",
+      "_composers-Cr-md-Pt.js",
+      "_ui-R2AzBjjk.js",
+      "_chevron-down-BV3wJmdQ.js",
+      "_chevron-left-Bwh0Hd9Q.js",
+      "_chevron-right-Doi4N2_N.js",
+      "_folder-tree-C0n7lEtH.js",
+      "_plus-Euag5-8e.js",
+      "_timer-BZ8hOC4P.js",
+      "_trash-2-Dx8XewWD.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/projects-view-Cu58GxvF.css"
+    ]
+  },
+  "components/views/quick-view.tsx": {
+    "file": "assets/quick-view-_Q6rdvdF.js",
+    "name": "quick-view",
+    "src": "components/views/quick-view.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_ui-R2AzBjjk.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/quick-DpwZ-3ei.css"
+    ]
+  },
+  "components/views/settings-view.tsx": {
+    "file": "assets/settings-view-Bz3nTiSf.js",
+    "name": "settings-view",
+    "src": "components/views/settings-view.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_ui-R2AzBjjk.js",
+      "_plus-Euag5-8e.js",
+      "_trash-2-Dx8XewWD.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/settings-view-BO7dAhyC.css"
+    ]
+  },
+  "components/views/today-view.tsx": {
+    "file": "assets/today-view-CiolhewO.js",
+    "name": "today-view",
+    "src": "components/views/today-view.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_app-navigation-BT-XnDWF.js",
+      "_composers-Cr-md-Pt.js",
+      "_ui-R2AzBjjk.js",
+      "_chevron-right-Doi4N2_N.js",
+      "_eye-DuF9KaKs.js",
+      "_trash-2-Dx8XewWD.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/today-view-BZYzEnqa.css"
+    ]
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "assets/layout-segment-context-B7O57T6G.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-CXnKph_e.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "assets/index-CmrSH_0G.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "dynamicImports": [
+      "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "components/planner-app.tsx",
+      "virtual:vinext-app-browser-entry"
+    ]
+  }
+}

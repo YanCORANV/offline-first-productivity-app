@@ -1,0 +1,39 @@
+.event-composer-inspector {
+  width: min(48rem, calc(100% - 2rem));
+}
+
+.event-composer-inspector .composer-form {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.event-composer-inspector .item-color-preview {
+  grid-column: 1 / -1;
+}
+
+.event-composer-inspector .composer-action-area,
+.event-composer-inspector .reminder-picker,
+.event-composer-inspector .origin-details {
+  grid-column: 1 / -1;
+}
+
+.event-composer-inspector .composer-form > *,
+.event-composer-inspector .field-grid > * {
+  min-width: 0;
+}
+
+@media (max-width: 47.9375rem) {
+  .event-composer-inspector .composer-form,
+  .event-composer-inspector .field-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .event-composer-inspector .item-color-preview,
+  .event-composer-inspector .item-type-section,
+  .event-composer-inspector .item-color-field,
+  .event-composer-inspector .composer-action-area,
+  .event-composer-inspector .reminder-picker,
+  .event-composer-inspector .origin-details {
+    grid-column: 1;
+  }
+
+}

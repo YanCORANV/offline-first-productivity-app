@@ -1,0 +1,74 @@
+{
+  "name": "Yan's Plan",
+  "short_name": "Yan's Plan",
+  "description": "极简个人规划与执行系统",
+  "start_url": "/today",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f1",
+  "theme_color": "#f5f5f1",
+  "orientation": "any",
+  "lang": "zh-CN",
+  "categories": ["productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "记录想法",
+      "short_name": "Quick Thought",
+      "description": "立即记录一条想法",
+      "url": "/quick",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "我有一点时间",
+      "short_name": "一点时间",
+      "description": "按当前可用时长寻找适合推进的事项",
+      "url": "/focus",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "今天",
+      "short_name": "Today",
+      "url": "/today"
+    },
+    {
+      "name": "项目",
+      "short_name": "Projects",
+      "url": "/projects"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4
+ * genre: modern-minimal · macrostructure: Workbench · designed-as-app
+ * theme: custom · vibe: "quiet, ordered, tactile, restrained"
+ * style: Apple-like Minimalist · palette: Low-saturation Morandi Blue
+ * contrast: pass (WCAG AA/AAA) · nav: N3 · footer: none · slop: pass
+ * tokens: pass · responsive: pass · icons: pass · density: compact
+ */
+
+:root {
+  /* Morandi Blue Palette - Calm, low-saturation, refined slate blue */
+  --color-paper: oklch(98% 0.005 235);
+  --color-paper-2: oklch(95.5% 0.008 235);
+  --color-paper-3: oklch(92.5% 0.012 235);
+  --color-ink: oklch(24% 0.015 235);
+  --color-ink-2: oklch(42% 0.018 235);
+  --color-muted: oklch(58% 0.015 235);
+  --color-neutral: oklch(48% 0.016 235);
+  --color-rule: oklch(89.5% 0.010 235);
+  --color-rule-2: oklch(94% 0.006 235);
+  --color-accent: oklch(56% 0.060 235);
+  --color-accent-strong: oklch(44% 0.052 235);
+  --color-accent-soft: oklch(93.5% 0.016 235);
+  --color-accent-ink: oklch(99% 0.003 235);
+  --color-focus: oklch(56% 0.060 235);
+  --color-focus-ring: oklch(56% 0.060 235 / 28%);
+  --color-warning: oklch(56% 0.080 65);
+  --color-warning-soft: oklch(95% 0.018 65);
+  --color-danger: oklch(52% 0.090 25);
+  --color-danger-soft: oklch(94% 0.020 25);
+  --color-event: oklch(54% 0.055 285);
+  --color-event-soft: oklch(94% 0.015 285);
+  --color-overlay: oklch(20% 0.015 235 / 26%);
+
+  /* Apple-like Typography Stack */
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", ui-sans-serif, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", ui-sans-serif, sans-serif;
+  --font-outlier: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "SF Pro Display", "PingFang SC",
+    ui-sans-serif, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --text-display: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+
+  /* Compact consistent 4px/8px Spacing scale */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+
+  --rule-hair: 1px;
+  --rule-fine: 2px;
+  --radius-card: 10px;
+  --radius-input: 7px;
+  --radius-modal: 12px;
+  --radius-pill: 999px;
+
+  /* Apple-like subtle layered shadows */
+  --shadow-card: 0 1px 3px oklch(24% 0.015 235 / 4%), 0 1px 2px oklch(24% 0.015 235 / 3%);
+  --shadow-popover: 0 8px 24px oklch(24% 0.015 235 / 10%), 0 2px 6px oklch(24% 0.015 235 / 4%);
+  --shadow-overlay: 0 20px 48px oklch(24% 0.015 235 / 16%), 0 4px 12px oklch(24% 0.015 235 / 6%);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 180ms;
+  --dur-long: 280ms;
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}

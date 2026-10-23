@@ -1,0 +1,742 @@
+.task-schedule-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Date & Time Container */
+.apple-datetime-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem 0.875rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.apple-datetime-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 48rem) {
+  .apple-datetime-row {
+    display: grid;
+    grid-template-columns: 1.15fr 2fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+}
+
+.task-date-repeat-row {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.task-time-entry-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.625rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  align-items: start;
+}
+
+.task-time-entry-row.is-deadline {
+  grid-template-columns: 1fr;
+}
+
+.task-time-entry-row.has-time {
+  /* class hook for test assertion */
+}
+
+.apple-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.apple-field-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 1.25rem;
+  gap: 0.25rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.apple-field-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  color: #1c1c1e;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.apple-field-icon {
+  color: #86868b;
+  flex-shrink: 0;
+}
+
+.apple-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.apple-input-wrapper input,
+.task-start-field input,
+.task-end-time-input-shell input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  line-height: calc(2.375rem - 2px);
+  padding: 0 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #d2d2d7;
+  background: #ffffff;
+  color: #1c1c1e;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.apple-input-wrapper input[type="date"],
+.apple-input-wrapper input[type="time"],
+.task-end-time-input-shell input[type="time"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  line-height: calc(2.375rem - 2px);
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.apple-input-wrapper input[type="date"]::-webkit-date-and-time-value,
+.apple-input-wrapper input[type="time"]::-webkit-date-and-time-value,
+.task-end-time-input-shell input[type="time"]::-webkit-date-and-time-value {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  width: 100%;
+  height: calc(2.375rem - 2px);
+  min-height: calc(2.375rem - 2px);
+  line-height: calc(2.375rem - 2px);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.apple-input-wrapper input[type="date"]::-webkit-datetime-edit,
+.apple-input-wrapper input[type="time"]::-webkit-datetime-edit,
+.task-end-time-input-shell input[type="time"]::-webkit-datetime-edit {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  line-height: calc(2.375rem - 2px);
+  display: inline-flex;
+  align-items: center;
+}
+
+.apple-input-wrapper input[type="date"]::-webkit-calendar-picker-indicator,
+.apple-input-wrapper input[type="time"]::-webkit-calendar-picker-indicator,
+.task-end-time-input-shell input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.apple-input-wrapper input:focus,
+.task-start-field input:focus,
+.task-end-time-input-shell input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  outline: none;
+}
+
+.task-start-field.is-overridden input {
+  color: #86868b;
+  background: #f5f5f7;
+  border-style: dashed;
+}
+
+/* End Time Control */
+.task-end-time-control {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  box-sizing: border-box;
+}
+
+.task-end-time-field {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  box-sizing: border-box;
+}
+
+.apple-add-end-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.task-time-end-add {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 2.375rem;
+  padding: 0 0.75rem;
+  border-radius: 10px;
+  border: 1px dashed #d2d2d7;
+  background: #ffffff;
+  color: #86868b;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+.task-time-end-add:hover {
+  background: #f5f5f7;
+  border-color: #86868b;
+  color: #1c1c1e;
+}
+
+.task-end-time-input-shell {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.task-time-end-remove {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  border: none;
+  background: transparent;
+  color: #8e8e93;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 4px;
+  height: 1.25rem;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.task-time-end-remove:hover {
+  color: #ff3b30;
+  background: rgba(255, 59, 48, 0.08);
+}
+
+.task-end-time-input-shell.is-invalid input {
+  border-color: #ff3b30;
+}
+
+.task-end-time-control .field-error {
+  color: #ff3b30;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Apple Toggles (All Day, Unscheduled, Morning, Afternoon, Evening) - macOS NSSegmentedControl */
+.apple-toggles-container {
+  padding-top: 0.125rem;
+  width: 100%;
+}
+
+.task-schedule-overrides {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  width: 100%;
+  box-sizing: border-box;
+  gap: 2px;
+}
+
+.apple-toggle-pill {
+  flex: 1 1 0%;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 1.75rem;
+  padding: 0 0.25rem;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #48484a;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  white-space: nowrap;
+  box-shadow: none;
+}
+
+.apple-toggle-pill:hover:not(.is-active) {
+  background: rgba(255, 255, 255, 0.6);
+  color: #1c1c1e;
+}
+
+.apple-toggle-icon {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.apple-toggle-text {
+  line-height: 1;
+}
+
+.task-schedule-overrides button.is-active,
+.apple-toggle-pill.is-active {
+  background: var(--color-paper);
+  border-color: rgba(0, 0, 0, 0.04);
+  color: var(--color-accent-strong);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0.5px 1px rgba(0, 0, 0, 0.06);
+}
+
+/* Apple Attribute Row (Icon + Label + Control) */
+.apple-attribute-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 2.75rem;
+  padding: 0.125rem 0;
+}
+
+.apple-attr-label-cell {
+  width: 6.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1c1c1e;
+}
+
+.apple-attr-icon {
+  color: #86868b;
+  flex-shrink: 0;
+}
+
+.apple-attr-control-cell {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.task-repeat-field {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.task-repeat-field .apple-select-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.apple-repeat-select-field,
+.task-repeat-field select,
+.task-repeat-field .apple-compact-select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 2.375rem;
+  padding: 0 2rem 0 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #d2d2d7;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2386868b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  font-size: 0.875rem;
+  color: #1c1c1e;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.task-repeat-field select:focus,
+.task-repeat-field .apple-compact-select:focus {
+  background-color: var(--color-paper);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  outline: none;
+}
+
+
+
+
+/* Course Schedule */
+.course-term-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.course-weekday-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.course-weekday-selector {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.375rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.course-weekday-selector button {
+  height: 2.25rem;
+  min-height: 2.25rem;
+  min-width: 0;
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid #d2d2d7;
+  background: #f5f5f7;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #1c1c1e;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-weekday-selector button:hover {
+  background: #e8e8ed;
+}
+
+.course-weekday-selector button.is-active {
+  background: var(--color-accent-strong);
+  border-color: var(--color-accent-strong);
+  color: var(--color-accent-ink);
+  font-weight: 600;
+  box-shadow: 0 2px 4px color-mix(in srgb, var(--color-accent-strong) 25%, transparent);
+}
+
+.course-time-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: end;
+}
+
+.course-location-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.course-schedule-summary {
+  margin: 0;
+  padding: 0.625rem 0.875rem;
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Deadline Layout (Standard Apple Components) */
+.is-deadline-composer {
+  gap: 1rem;
+}
+
+.apple-datetime-card.is-deadline {
+  gap: 0.875rem;
+}
+
+.deadline-datetime-row {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 0.75rem;
+  align-items: end;
+  width: 100%;
+}
+
+.deadline-datetime-row.is-secondary-row {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.deadline-time-with-clear {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  width: 100%;
+}
+
+.deadline-time-with-clear .apple-input-wrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+.deadline-desired-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2.375rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #86868b;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.deadline-desired-remove:hover {
+  background: #e8e8ed;
+  color: #1c1c1e;
+}
+
+.deadline-desired-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 8px;
+  border: 1px dashed #d2d2d7;
+  background-color: transparent;
+  font-size: 0.8125rem;
+  color: #86868b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.deadline-desired-add-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-strong);
+  background-color: var(--color-accent-soft);
+}
+
+.apple-optional-tag {
+  font-size: 0.6875rem;
+  font-weight: normal;
+  color: #86868b;
+  margin-left: 0.25rem;
+}
+
+/* Status & Repeat Row (Unified on One Line) */
+.apple-attribute-row.is-status-repeat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.125rem 0;
+}
+
+.apple-status-repeat-col {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.apple-status-repeat-col .apple-attr-label-cell {
+  width: 4rem;
+  flex-shrink: 0;
+}
+
+.apple-status-repeat-col .apple-attr-control-cell {
+  flex: 1;
+  min-width: 0;
+}
+
+.apple-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.apple-select-wrapper .apple-compact-select {
+  width: 100%;
+  height: 2.375rem;
+  padding: 0 1.75rem 0 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d2d2d7;
+  background-color: #fbfbfd;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2386868b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.625rem center;
+  font-size: 0.8125rem;
+  color: #1c1c1e;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+.apple-select-wrapper .apple-compact-select:focus {
+  background-color: var(--color-paper);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  outline: none;
+}
+
+@media (max-width: 47.9375rem) {
+  .apple-datetime-card {
+    padding: 0.75rem 0.875rem;
+    gap: 0.75rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .apple-datetime-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .task-date-repeat-row {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .task-time-entry-row {
+    grid-column: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.625rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    align-items: start;
+  }
+
+  .task-time-entry-row.is-deadline {
+    grid-template-columns: 1fr;
+  }
+
+  .apple-toggles-container {
+    padding-top: 0.25rem;
+    width: 100%;
+  }
+
+  .task-schedule-overrides {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.375rem;
+    width: 100%;
+  }
+
+  .apple-toggle-pill {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+  }
+}

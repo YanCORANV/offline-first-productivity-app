@@ -1,0 +1,127 @@
+
+.item-preview-check {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  border: var(--rule-fine) solid
+    color-mix(in srgb, var(--preview-color) 78%, var(--color-ink-2));
+  border-radius: 0.3125rem;
+}
+
+.title-preview-input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  color: var(--color-ink);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: var(--text-base);
+  font-weight: 650;
+}
+
+.item-type-options > button.is-active {
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+.composer-form > * { min-width: 0; }
+
+.reminder-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.reminder-picker .reminder-pill {
+  min-height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding-inline: var(--space-xs);
+  color: var(--color-ink-2);
+  background: var(--color-paper-2);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-input, 0.375rem);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+.reminder-picker .reminder-pill:hover {
+  background: var(--color-paper-3, #f5f5f7);
+  border-color: var(--color-rule-2, #8e8e93);
+}
+
+.reminder-picker .reminder-pill.is-checked {
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  font-weight: 550;
+}
+
+.reminder-picker .reminder-pill input[type="checkbox"] {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin: 0;
+  accent-color: var(--color-accent-strong);
+  cursor: pointer;
+}
+
+.reminder-picker .reminder-custom-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding-inline: var(--space-xs);
+}
+
+.reminder-custom-check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  cursor: pointer;
+  user-select: none;
+}
+
+.reminder-custom-inline-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-inline-start: var(--space-2xs);
+  padding-inline-start: var(--space-2xs);
+  border-inline-start: var(--rule-hair) solid var(--color-rule-2);
+}
+
+.reminder-picker .reminder-custom-inline-controls input {
+  width: 2.75rem;
+  height: 1.5rem;
+  padding: 0 0.25rem;
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: 4px;
+  background: var(--color-paper, #ffffff);
+  color: var(--color-ink, #1c1c1e);
+  font-size: var(--text-xs);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  outline: none;
+}
+
+.reminder-picker .reminder-custom-inline-controls select {
+  height: 1.5rem;
+  padding: 0 0.375rem;
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: 4px;
+  background: var(--color-paper, #ffffff);
+  color: var(--color-ink, #1c1c1e);
+  font-size: var(--text-xs);
+  outline: none;
+  cursor: pointer;
+}
+
+.reminder-picker .reminder-custom-inline-controls input:focus-visible,
+.reminder-picker .reminder-custom-inline-controls select:focus-visible {
+  outline: var(--rule-fine) solid var(--color-focus);
+}

@@ -1,0 +1,12 @@
+.project-init-panel {
+  padding: 0;
+  background: color-mix(in srgb, var(--goal-color, #0071e3) 1%, transparent);
+  border: none;
+  box-shadow: none;
+}
+
+.project-init-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

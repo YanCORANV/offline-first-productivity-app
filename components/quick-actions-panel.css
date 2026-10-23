@@ -1,0 +1,124 @@
+.quick-actions-inspector {
+  width: min(35rem, calc(100% - var(--space-md)));
+}
+
+.quick-actions-panel {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-md);
+}
+
+.quick-actions-panel > section {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.quick-actions-panel .quick-capture {
+  margin: 0;
+}
+
+.quick-actions-panel .capture-hint {
+  display: none;
+}
+
+.quick-focus-section > header {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.quick-focus-section > header > div {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-3xs);
+}
+
+.quick-focus-section > header small {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.duration-pills {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-xs);
+}
+
+.duration-pills button {
+  min-width: 0;
+  min-height: 2.75rem;
+  padding-inline: var(--space-xs);
+  color: var(--color-ink-2);
+  background: var(--color-paper-2);
+  border: var(--rule-hair) solid transparent;
+  border-radius: var(--radius-input);
+  font-size: var(--text-sm);
+}
+
+.duration-pills button:hover {
+  color: var(--color-ink);
+  border-color: var(--color-rule);
+}
+
+.duration-pills button.is-active {
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.quick-focus-results {
+  min-width: 0;
+  display: grid;
+  gap: 0;
+  border-block-start: var(--rule-hair) solid var(--color-rule-2);
+}
+
+.quick-focus-results > button {
+  min-width: 0;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  color: var(--color-ink);
+  background: transparent;
+  border-block-end: var(--rule-hair) solid var(--color-rule-2);
+  text-align: start;
+}
+
+.quick-focus-results > button:hover {
+  background: var(--color-paper-2);
+}
+
+.quick-focus-results > button > span {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-3xs);
+}
+
+.quick-focus-results strong,
+.quick-focus-results small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quick-focus-results small {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.inline-note {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 47.9375rem) {
+  .duration-pills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

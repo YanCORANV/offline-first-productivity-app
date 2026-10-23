@@ -1,0 +1,406 @@
+.content-card {
+  min-width: 0;
+  padding: var(--space-lg);
+  background: var(--color-paper);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+}
+
+.today-layout {
+  container: today / inline-size;
+}
+
+.today-grid {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 1.25rem;
+}
+
+.today-schedule-card {
+  min-height: 0;
+  overflow: visible;
+  background: var(--color-paper);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  padding: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.today-side-column {
+  min-width: 0;
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+@container today (min-width: 48rem) {
+  .today-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(21rem, 0.85fr);
+  }
+
+  .today-schedule-card {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .today-side-column {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* Legacy layout pattern compatibility */
+@container today (max-width: 0px) {
+  .today-grid {
+    grid-template-columns: minmax(16rem, 1.2fr) minmax(11rem, 0.9fr) minmax(11rem, 0.9fr) minmax(18rem, 1.25fr);
+  }
+}
+
+@media (max-width: 0px) {
+.today-side-column {
+  display: contents;
+}
+}
+
+.mobile-today-header {
+  display: none;
+}
+
+.today-schedule-mobile-add-btn {
+  display: none;
+}
+
+.today-mobile-agenda {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .today-memo-card {
+    display: none;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .content-card {
+    padding: var(--space-md);
+  }
+
+  .today-header-bar {
+    display: none;
+  }
+
+  .mobile-today-header {
+    display: block;
+    margin-block-end: 1rem;
+  }
+
+  .mobile-today-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 0.375rem;
+  }
+
+  .mobile-today-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+  }
+
+  .mobile-today-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    flex-wrap: nowrap;
+  }
+
+  .mobile-today-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    height: 1.875rem;
+    padding: 0 0.5rem;
+    border-radius: 8px;
+    background: #f1f5f9;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--color-ink-2);
+    font-size: 0.75rem;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .mobile-today-action-btn:active {
+    background: #e2e8f0;
+  }
+
+  .mobile-today-action-btn.is-active {
+    background: var(--color-accent-soft);
+    color: var(--color-accent-strong);
+    border-color: color-mix(in srgb, var(--color-accent) 24%, transparent);
+  }
+
+  .mobile-today-add-btn {
+    background: var(--color-accent-strong);
+    color: var(--color-accent-ink);
+    border-color: var(--color-accent-strong);
+  }
+
+  .mobile-today-add-btn:active {
+    background: color-mix(in srgb, var(--color-accent-strong) 88%, black);
+  }
+
+  .mobile-today-subtitle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 0.625rem;
+    min-height: 1.5rem;
+  }
+
+  .mobile-today-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-muted);
+  }
+
+  .mobile-today-back-today-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent-strong);
+    background: var(--color-accent-soft);
+    border: var(--rule-hair) solid color-mix(in srgb, var(--color-accent) 24%, transparent);
+    border-radius: var(--radius-pill);
+    padding: 0.1875rem 0.5rem;
+    cursor: pointer;
+    line-height: 1.2;
+    transition: all var(--dur-short) var(--ease-out);
+  }
+
+  .mobile-today-back-today-btn:active {
+    background: color-mix(in srgb, var(--color-accent-soft) 80%, var(--color-accent));
+  }
+
+  .mobile-week-strip {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.125rem;
+    padding: 0.375rem 0.125rem 0.5rem;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    margin-block-end: 0.25rem;
+  }
+
+  .mobile-week-day-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    padding: 0.1875rem 0 0.3125rem;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .mobile-week-day-name {
+    font-size: 0.625rem;
+    color: var(--color-muted);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .mobile-week-day-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    border-radius: 50%;
+    transition: all 0.15s ease;
+  }
+
+  .mobile-week-day-btn.is-selected .mobile-week-day-name {
+    color: var(--color-accent-strong);
+    font-weight: 600;
+  }
+
+  .mobile-week-day-btn.is-selected .mobile-week-day-num {
+    background: var(--color-accent-strong);
+    color: var(--color-accent-ink);
+    box-shadow: 0 1px 4px color-mix(in srgb, var(--color-accent-strong) 30%, transparent);
+  }
+
+  .mobile-week-day-btn.is-selected .mobile-week-selected-indicator {
+    position: absolute;
+    bottom: -0.375rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 3px;
+    background: var(--color-accent-strong);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+
+  .mobile-week-day-btn.is-today:not(.is-selected) .mobile-week-day-num {
+    color: var(--color-accent-strong);
+    font-weight: 700;
+  }
+
+  .mobile-week-day-btn.has-exam {
+    background: rgba(255, 59, 48, 0.08);
+  }
+
+  .mobile-week-day-btn.has-exam .mobile-week-day-name {
+    color: #d70015;
+    font-weight: 600;
+  }
+
+  .mobile-week-day-btn.has-exam:not(.is-selected) .mobile-week-day-num {
+    color: #d70015;
+  }
+
+  .mobile-week-day-btn.is-selected.has-exam .mobile-week-day-num {
+    background: #d70015;
+    box-shadow: 0 1px 4px rgba(215, 0, 21, 0.35);
+  }
+
+  .mobile-week-day-btn.is-selected.has-exam .mobile-week-selected-indicator {
+    background: #d70015;
+  }
+
+  .today-schedule-heading {
+    display: none;
+  }
+
+  /* De-cardify: Eliminate nested card frames and heavy borders on mobile */
+  .today-schedule-card,
+  .today-ref-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0.25rem 0;
+  }
+
+  .today-desktop-timeline {
+    display: none;
+  }
+
+  .today-mobile-agenda {
+    display: block;
+    margin-block-start: 0.375rem;
+  }
+
+  .today-mobile-agenda-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .today-mobile-agenda-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.625rem 0;
+    border-block-end: 1px solid rgba(0, 0, 0, 0.06);
+    transition: opacity 0.15s ease;
+  }
+
+  .today-mobile-agenda-row.is-completed {
+    opacity: 0.6;
+  }
+
+  .today-mobile-check-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .today-mobile-circle {
+    width: 1.1875rem;
+    height: 1.1875rem;
+    border-radius: 50%;
+    border: 1.5px solid #86868b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.15s ease;
+  }
+
+  .today-mobile-circle.is-checked {
+    background: var(--color-accent-strong);
+    border-color: var(--color-accent-strong);
+  }
+
+  .today-mobile-color-bar {
+    width: 3px;
+    height: 1.25rem;
+    border-radius: 1.5px;
+    flex-shrink: 0;
+  }
+
+  .today-mobile-agenda-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .today-mobile-item-title {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .today-mobile-agenda-row.is-completed .today-mobile-item-title {
+    text-decoration: line-through;
+    color: var(--color-muted);
+  }
+
+  .today-mobile-timing-badge {
+    font-size: 0.6875rem;
+    color: #ff9500;
+    font-weight: 500;
+    margin-block-start: 1px;
+  }
+
+  .today-mobile-agenda-time {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+
+  .today-mobile-empty {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    padding: 1.25rem 0;
+    text-align: center;
+  }
+}

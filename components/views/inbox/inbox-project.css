@@ -1,0 +1,150 @@
+.inbox-project-panel {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: var(--space-sm);
+  margin-block: var(--space-xs) var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-paper-2);
+  border: var(--rule-hair) solid var(--color-rule-2);
+  border-radius: var(--radius-input);
+}
+
+.inbox-project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.inbox-project-header h3 { margin: 0; color: var(--color-ink); font-size: var(--text-base); }
+
+.inbox-project-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 1fr);
+  gap: var(--space-sm);
+  align-items: start;
+}
+
+.inbox-goal-field { gap: var(--space-2xs); }
+.inbox-goal-picker { position: relative; min-width: 0; }
+
+.inbox-goal-input {
+  min-height: 2.75rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 2.75rem;
+  align-items: center;
+  padding-inline-start: var(--space-sm);
+  background: var(--color-paper);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-input);
+  overflow: hidden;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.inbox-goal-input:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-soft);
+}
+
+.inbox-goal-input input {
+  min-width: 0;
+  min-height: 2.625rem;
+  padding: 0;
+  color: var(--color-ink);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.inbox-goal-toggle {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  align-self: stretch;
+  padding: 0;
+  color: var(--color-ink-2);
+  background: transparent;
+  border: 0;
+  border-inline-start: var(--rule-hair) solid rgb(0 0 0 / 10%);
+  border-radius: 0;
+}
+
+.inbox-goal-toggle svg { display: block; transition: transform 160ms ease; }
+.inbox-goal-input.is-open .inbox-goal-toggle svg { transform: rotate(180deg); }
+
+.inbox-goal-options {
+  position: absolute;
+  z-index: var(--z-dropdown);
+  inset: calc(100% + var(--space-2xs)) 0 auto;
+  max-height: 14rem;
+  display: grid;
+  gap: 2px;
+  padding: var(--space-2xs);
+  overflow-y: auto;
+  background: var(--color-paper);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-input);
+  box-shadow: var(--shadow-overlay);
+}
+
+.inbox-goal-options button {
+  width: 100%;
+  min-height: 2.5rem;
+  display: grid;
+  grid-template-columns: 1rem minmax(0, 1fr) 1rem;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-inline: var(--space-xs);
+  color: var(--color-ink-2);
+  background: transparent;
+  border: 0;
+  border-radius: calc(var(--radius-input) - 2px);
+  text-align: start;
+}
+
+.inbox-goal-options button:hover,
+.inbox-goal-options button.is-active { background: var(--color-paper-2); }
+
+.inbox-goal-options button > span {
+  width: .875rem;
+  height: .875rem;
+  border: var(--rule-hair) solid rgb(0 0 0 / 10%);
+  border-radius: 50%;
+}
+
+.inbox-goal-options button strong {
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--text-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inbox-goal-colors { display: flex; flex-wrap: wrap; gap: var(--space-2xs); }
+
+.inbox-goal-colors button {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.inbox-goal-colors button:hover:not(:disabled) { transform: translateY(-1px); }
+.inbox-goal-colors button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.inbox-goal-colors button:disabled { cursor: default; }
+.inbox-goal-colors button.is-active { border-color: var(--color-ink); box-shadow: 0 0 0 2px var(--color-paper-2); }
+
+.inbox-project-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-xs);
+  padding-block-start: var(--space-xs);
+  border-block-start: var(--rule-hair) solid var(--color-rule-2);
+}
+
+@media (max-width: 47.9375rem) { .inbox-project-fields { grid-template-columns: minmax(0, 1fr); } }

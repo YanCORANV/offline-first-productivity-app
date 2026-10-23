@@ -1,0 +1,141 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench · design-system: design.md · designed-as-app
+ * pre-emit critique: P4 H4 E4 S4 R5 V4 */
+.candidate-pool {
+  min-width: 0;
+}
+
+.candidate-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.375rem;
+  height: 1.125rem;
+  min-width: 1.125rem;
+  background: #f2f2f7;
+  color: #86868b;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin-left: 0.25rem;
+}
+
+.candidate-list {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2xs) var(--space-sm);
+  align-content: start;
+  padding: 0;
+}
+
+.unscheduled-item {
+  min-width: 0;
+  min-height: 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1.5rem;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: var(--space-3xs) 0;
+  border-block-end: var(--rule-hair) solid var(--color-rule-2);
+}
+
+.unscheduled-item.is-target {
+  background: var(--color-accent-soft);
+}
+
+.unscheduled-item.is-busy {
+  cursor: progress;
+  opacity: 0.62;
+}
+
+.candidate-open-button {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs);
+  background: transparent;
+  border-radius: var(--radius-input);
+  text-align: start;
+}
+
+.candidate-open-button > span {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-3xs);
+}
+
+.candidate-open-button strong,
+.candidate-open-button small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.candidate-open-button strong {
+  display: -webkit-box;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: var(--text-sm);
+  line-height: 1.25;
+}
+
+.candidate-open-button small {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.candidate-open-button:hover {
+  background: var(--color-paper);
+}
+
+.candidate-delete {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: var(--color-muted);
+  background: transparent;
+  border-radius: var(--radius-input);
+}
+
+.candidate-delete:hover,
+.candidate-delete:focus-visible {
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+}
+
+.candidate-more {
+  width: 100%;
+  min-height: 2.25rem;
+  color: var(--color-accent-strong);
+  background: transparent;
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 47.9375rem) {
+  .candidate-list {
+    grid-auto-rows: max-content;
+  }
+
+  .unscheduled-item {
+    min-height: 3.25rem;
+    padding-block: var(--space-2xs);
+  }
+
+  .candidate-open-button {
+    align-self: stretch;
+    padding-block: var(--space-xs);
+  }
+
+  .candidate-open-button strong,
+  .candidate-open-button small {
+    line-height: 1.35;
+  }
+}

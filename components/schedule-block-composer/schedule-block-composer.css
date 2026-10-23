@@ -1,0 +1,37 @@
+.schedule-block-composer-inspector {
+  width: min(38rem, calc(100% - 2rem));
+}
+
+.schedule-block-composer-inspector .composer-form,
+.schedule-block-composer-inspector .field-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.schedule-block-composer-inspector .composer-form > *,
+.schedule-block-composer-inspector .field-grid > * {
+  min-width: 0;
+}
+
+.schedule-block-composer-form {
+  display: grid;
+  gap: var(--space-md);
+  padding: 0;
+}
+
+.schedule-block-composer-form .field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm) var(--space-md);
+}
+
+.schedule-block-error {
+  margin: 0;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 47.9375rem) {
+  .schedule-block-composer-form .field-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

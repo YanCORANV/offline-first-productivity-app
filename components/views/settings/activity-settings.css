@@ -1,0 +1,108 @@
+.activity-list {
+  display: grid;
+  border-block: var(--rule-hair) solid var(--color-rule-2);
+}
+
+.activity-row {
+  min-width: 0;
+  min-height: 2.75rem;
+  display: grid;
+  grid-template-columns: auto minmax(10rem, 20rem) auto 2rem;
+  align-items: center;
+  justify-content: start;
+  gap: var(--space-xs);
+  padding-block: var(--space-xs);
+  border-block-end: var(--rule-hair) solid var(--color-rule-2);
+}
+
+.activity-row:last-child { border-block-end: 0; }
+
+.activity-title-input {
+  min-width: 0;
+  width: 100%;
+  min-height: var(--control-height);
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-input);
+  font-size: var(--text-sm);
+}
+
+.activity-minute-options {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+.activity-minute-options button {
+  min-width: 2.25rem;
+  min-height: 2rem;
+  padding: 0 var(--space-xs);
+  color: var(--color-muted);
+  background: var(--color-paper-2);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-input);
+  font-size: var(--text-xs);
+}
+
+.activity-minute-options button.is-active {
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-rule));
+}
+
+.activity-create > input {
+  width: min(20rem, 100%);
+  flex: 0 1 20rem;
+}
+
+@media (max-width: 47.9375rem) {
+  .activity-row {
+    grid-template-columns: auto minmax(0, 1fr) 2.5rem;
+    gap: var(--space-xs);
+    padding-block: var(--space-xs);
+  }
+
+  .activity-title-input { min-height: 2.5rem; }
+
+  .activity-row .activity-minute-options {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .activity-row .activity-delete {
+    grid-column: 3;
+    grid-row: 1;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .activity-create {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2.5rem;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .activity-create > input {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 2.5rem;
+    flex: none;
+    width: 100%;
+  }
+
+  .activity-create > .activity-minute-options {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .activity-create > button:last-child {
+    grid-column: 2;
+    grid-row: 1;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
